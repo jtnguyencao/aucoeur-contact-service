@@ -1,4 +1,4 @@
-### AuxaSphere contact
+### AuCoeur Service contact
 Copy .env.local.example to your .env
 ```bash
 cp .env.local.example .env
