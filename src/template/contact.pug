@@ -1,0 +1,32 @@
+mjml
+  mj-head
+    mj-attributes
+      mj-text(padding="4px 0px" font-size="14px" font-family="helvetica" color="#444445")
+      mj-button(font-size="14px" font-family="helvetica" background-color="#1491ff" color="#ffffff")
+  mj-body
+    mj-section
+      mj-column       
+        mj-text(padding-bottom="20px")
+          | Bonjour Aucoeur Service Contact,
+        mj-text(line-height="20px" padding-bottom="10px")
+          | Vous avez reçu une prise de contact de <strong>#{name}</strong> via <strong>#{website}</strong>.
+        mj-text(padding-bottom="10px")
+          | <strong>Nom :</strong> #{name}
+        mj-text(padding-bottom="10px")
+          | <strong>Email :</strong> #{email}
+        mj-text(padding-bottom="10px")
+          | <strong>Téléphone :</strong> #{phone}
+        mj-text(padding-bottom="10px")
+          | <strong>Message :</strong> 
+        mj-text(padding-top="0")
+          pre(style="border: 1px solid #949695; padding: 5px; min-height: 4em; max-width: 60em; white-space: break-spaces; font-family: helvetica;")
+            != message
+        mj-divider(border-color="#dfe3e8" padding-top="20px" padding-bottom="20px")
+        mj-text(padding-top="10px" font-size="14px" font-family="helvetica" color="#444445")
+          | Cordialement,
+        mj-text(padding-top="0")
+          | <strong>Au Coeur Contact</strong>
+        mj-text(padding-top="0")
+          | <a href="mailto:aucoeur.contact@gmail.com">aucoeur.contact@gmail.com</a>
+        mj-text(padding-top="0")
+          | <a href="https://www.aucoeurservice.fr/" target="_blank">https://www.aucoeurservice.fr/</a>
