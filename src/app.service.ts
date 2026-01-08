@@ -68,8 +68,10 @@ export class AppService {
       console.error(e.formattedMessage)
     }
 
-    this.mailerService.sendMail({
+    const ccList = process.env.MAILER_CC.split(',') 
+    this.mailerService.sendMail({ 
       to: process.env.MAILER_TO, 
+      cc: ccList,
       from: process.env.MAILER_FROM,
       subject,
       html: mjmlHTML.html,
