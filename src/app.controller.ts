@@ -10,9 +10,15 @@ export class AppController {
   @Post()
   @UseInterceptors(FileInterceptor('file'))
   async contact(@UploadedFile() file: Express.Multer.File, @Body() contactDto: ContactDto) {
-    await this.appService.sendContact({
-      ...contactDto,
-      file: file || null,
-    })
+    try {
+      await this.appService.sendContact({
+        ...contactDto,
+        file: file || null,
+      })
+      return { success: true, message: 'Email sent successfully' }
+    } catch (error) {
+      console.error('Error in contact controller:', error)
+      throw error
+    }
   }
 }
